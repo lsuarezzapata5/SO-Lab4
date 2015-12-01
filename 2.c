@@ -28,8 +28,8 @@ int main(){
 	hilo2_param.contador = 200;
 	pthread_create (&id_hilo_2, NULL,&imprimir_caracter, &hilo2_param);
 
-	//pthread_join (id_hilo_1, NULL);
-	//pthread_join (id_hilo_2, NULL);
+	pthread_join (id_hilo_1, NULL);
+	pthread_join (id_hilo_2, NULL);
 	
 	fputc('\n', stderr);
 	return 0;
